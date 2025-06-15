@@ -217,7 +217,7 @@ def process_query(collection, embedder, history, user_question):
     
     # Retrieve relevant documents
     documents, distances = search_documents(collection, embedder, user_question)
-    print(f"Similarity scores: {[f'{d:.3f}' for d in distances]}")
+    # print(f"Similarity scores: {[f'{d:.3f}' for d in distances]}")
     
     # Build prompt with context
     prompt = build_prompt(history, user_question, documents, distances)
